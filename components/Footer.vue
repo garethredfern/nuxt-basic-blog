@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-gray-100">
+  <footer class="bg-blue-100">
     <div class="container mx-auto p-4">
       <small>&copy; {{ new Date().getFullYear() }} {{ siteName }}</small>
     </div>

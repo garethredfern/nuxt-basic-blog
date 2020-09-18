@@ -21,7 +21,7 @@
         </div>
       </div>
     </header>
-    <div class="prose prose-lg text-gray-500 mx-auto">
+    <div class="prose prose-lg text-gray-500 bg-white p-5 rounded mx-auto">
       <nuxt-content :document="article" />
     </div>
     <footer class="py-5 mt-5">
