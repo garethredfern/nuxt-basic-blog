@@ -2,7 +2,7 @@
   <div>
     <div class="flex justify-center">
       <h2
-        class="text-center text-3xl mb-4 uppercase bg-black text-yellow-200 inline-block mx-auto px-2"
+        class="text-center text-3xl mb-4 uppercase bg-black text-white inline-block mx-auto px-2"
       >
         All Articles
       </h2>
