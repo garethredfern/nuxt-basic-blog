@@ -11,9 +11,14 @@
     "lint": "npm run lint:js"
   },
   "dependencies": {
-    "@nuxt/content": "^1.8.1",
-    "core-js": "^3.6.5",
-    "nuxt": "^2.14.5"
+    "@nuxt/content": "^1.9.0",
+    "@nuxtjs/feed": "^2.0.0",
+    "@nuxtjs/sitemap": "^2.4.0",
+    "@tailwindcss/typography": "^0.2.0",
+    "@tailwindcss/ui": "^0.5.0",
+    "nuxt": "^2.14.5",
+    "prism-themes": "^1.4.0",
+    "core-js": "^3.6.5"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.1.0",

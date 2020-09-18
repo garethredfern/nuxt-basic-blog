@@ -1,5 +1,12 @@
 <template>
   <div>
+    <div class="flex justify-center">
+      <h2
+        class="text-center text-3xl mb-4 uppercase bg-black text-yellow-200 inline-block mx-auto px-2"
+      >
+        All Articles
+      </h2>
+    </div>
     <ArticleList :articles="articles" />
   </div>
 </template>
@@ -8,7 +15,7 @@
 import ArticleList from '@/components/ArticleList';
 
 export default {
-  name: 'HomePage',
+  name: 'ArticleListPage',
   components: {
     ArticleList,
   },
