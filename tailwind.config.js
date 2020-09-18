@@ -1,3 +1,4 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
 /*
  ** TailwindCSS Configuration File
  **
@@ -5,7 +6,13 @@
  ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
  */
 module.exports = {
-  theme: {},
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Open Sans', ...defaultTheme.fontFamily.sans],
+      },
+    },
+  },
   variants: {},
   plugins: [require('@tailwindcss/ui'), require('@tailwindcss/typography')],
   purge: {
