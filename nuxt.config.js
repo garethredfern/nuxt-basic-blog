@@ -118,7 +118,7 @@ export default {
           date: new Date(article.published),
           description: article.description,
           content: article.description,
-          author: global.twitter,
+          author: global.twitterHandle,
         });
       });
     };

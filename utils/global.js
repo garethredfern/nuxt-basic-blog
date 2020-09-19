@@ -6,7 +6,10 @@
 export default {
   siteUrl: 'https://example.com',
   siteName: 'Starter Blog',
-  twitter: '@yourhandle',
+  author: 'Joe Blogs',
+  twitterHandle: '@joeblogs',
+  twitterURL: 'https://twitter.com/garethredfern',
+  githubURL: 'https://github.com/garethredfern',
   siteTitle: 'Add Your Main Site Title Here',
   siteDesc:
     'A description for your site here, this will show on the home page.',

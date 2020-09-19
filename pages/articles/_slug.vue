@@ -31,6 +31,7 @@
 </template>
 
 <script>
+import global from '@/utils/global';
 import getSiteMeta from '@/utils/getSiteMeta';
 
 export default {
@@ -80,7 +81,7 @@ export default {
           content: this.article.tags ? this.article.tags.toString() : '',
         },
         { name: 'twitter:label1', content: 'Written by' },
-        { name: 'twitter:data1', content: 'Gareth Redfern' },
+        { name: 'twitter:data1', content: global.author || '' },
         { name: 'twitter:label2', content: 'Filed under' },
         {
           name: 'twitter:data2',
