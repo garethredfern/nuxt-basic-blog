@@ -3,7 +3,7 @@
     <NuxtLink
       v-if="prev"
       :to="{ name: 'articles-slug', params: { slug: prev.slug } }"
-      class="bg-black text-white px-4 py-1 hover:bg-gray-700 transform duration-500 ease-in-out"
+      :class="linkStyles"
     >
       {{ prev.title }}
     </NuxtLink>
@@ -11,7 +11,7 @@
     <NuxtLink
       v-if="next"
       :to="{ name: 'articles-slug', params: { slug: next.slug } }"
-      class="bg-black text-white px-4 py-1 hover:bg-gray-700 transform duration-500 ease-in-out"
+      :class="linkStyles"
     >
       {{ next.title }}
     </NuxtLink>
@@ -25,11 +25,16 @@ export default {
   props: {
     prev: {
       type: Object,
-      default: () => null,
+      default: null,
     },
     next: {
       type: Object,
-      default: () => null,
+      default: null,
+    },
+  },
+  computed: {
+    linkStyles() {
+      return 'bg-black text-white px-4 py-1 hover:bg-gray-700 transform duration-500 ease-in-out';
     },
   },
 };
