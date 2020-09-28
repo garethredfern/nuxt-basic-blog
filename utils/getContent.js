@@ -5,18 +5,20 @@ export default async ($content, params, error) => {
 
   const allArticles = await $content('articles').fetch();
 
-  const articleCount = allArticles.length;
+  const totalArticles = allArticles.length;
 
-  const lastPage = Math.ceil(articleCount / perPage);
+  // use Math.ceil to round up to the nearest whole number
+  const lastPage = Math.ceil(totalArticles / perPage);
 
-  const lastPageCount = articleCount % perPage;
+  // use the % (modulus) operator to get a whole remainder
+  const lastPageCount = totalArticles % perPage;
 
   const skipNumber = () => {
     if (currentPage === 1) {
       return 0;
     }
     if (currentPage === lastPage) {
-      return articleCount - lastPageCount;
+      return totalArticles - lastPageCount;
     }
     return (currentPage - 1) * perPage;
   };
