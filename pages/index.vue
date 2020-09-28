@@ -1,10 +1,9 @@
 <template>
-  <div>
-    <ArticleList :articles="articles" />
-  </div>
+  <ArticleList :articles="paginatedArticles" :total="allArticles.length" />
 </template>
 
 <script>
+import getContent from '@/utils/getContent';
 import ArticleList from '@/components/ArticleList';
 
 export default {
@@ -12,14 +11,11 @@ export default {
   components: {
     ArticleList,
   },
-  async asyncData({ $content }) {
-    const articles = await $content('articles')
-      .only(['title', 'description', 'image', 'slug', 'published'])
-      .sortBy('published', 'desc')
-      .fetch();
-
+  async asyncData({ $content, app, params, error }) {
+    const content = await getContent($content, params, error);
     return {
-      articles,
+      allArticles: content.allArticles,
+      paginatedArticles: content.paginatedArticles,
     };
   },
 };
