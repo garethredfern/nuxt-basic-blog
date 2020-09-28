@@ -34,7 +34,7 @@ export default {
   },
   computed: {
     linkStyles() {
-      return 'bg-black text-white px-4 py-1 hover:bg-gray-700 transform duration-500 ease-in-out';
+      return 'bg-indigo-400 text-white px-4 py-1 hover:bg-indigo-500 transform duration-500 ease-in-out';
     },
   },
 };

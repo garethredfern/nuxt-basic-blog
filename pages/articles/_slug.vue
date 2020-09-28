@@ -1,7 +1,7 @@
 <template>
   <article>
     <header class="text-white mx-auto text-xs">
-      <div class="p-5 bg-black md:inline-block">
+      <div class="p-5 bg-indigo-500 md:inline-block">
         <p>
           <span class="uppercase">Published:</span>
           <span>{{ article.published }}</span>
