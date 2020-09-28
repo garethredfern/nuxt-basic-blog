@@ -32,5 +32,17 @@ export default {
       tags,
     };
   },
+  head() {
+    return {
+      title: 'Article Tags - Learning Laravel and VueJS',
+      link: [
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: `${this.$config.baseUrl}/tags`,
+        },
+      ],
+    };
+  },
 };
 </script>

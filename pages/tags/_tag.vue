@@ -32,5 +32,22 @@ export default {
       articlesByTag,
     };
   },
+  methods: {
+    captialise(text) {
+      return text.charAt(0).toUpperCase() + text.slice(1);
+    },
+  },
+  head() {
+    return {
+      title: `Articles Tagged - ${this.captialise(this.$route.params.tag)}`,
+      link: [
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: `${this.$config.baseUrl}/tags/${this.$route.params.tag}`,
+        },
+      ],
+    };
+  },
 };
 </script>
