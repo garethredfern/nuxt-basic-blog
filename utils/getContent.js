@@ -1,6 +1,7 @@
 export default async ($content, params, error) => {
   const currentPage = parseInt(params.page);
 
+  // Set how many articles to show per page
   const perPage = 5;
 
   const allArticles = await $content('articles').fetch();
@@ -11,7 +12,7 @@ export default async ($content, params, error) => {
   const lastPage = Math.ceil(totalArticles / perPage);
 
   // use the % (modulus) operator to get a whole remainder
-  const lastPageCount = totalArticles % perPage;
+  const lastPageCount = totalArticles % perPage === 0 ? perPage : totalArticles % perPage;
 
   const skipNumber = () => {
     if (currentPage === 1) {
